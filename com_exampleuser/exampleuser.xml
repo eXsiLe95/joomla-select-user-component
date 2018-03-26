@@ -10,7 +10,7 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         A basic component on which a user can be selected in the backend which will then be displayed on the frontend

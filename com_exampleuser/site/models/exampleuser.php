@@ -27,9 +27,19 @@ class ExampleUserModelExampleUser extends JModelItem {
      */
     public function getMessage() {
         if(!isset($this->message)) {
-            $this->message = 'Example User';
-        }
+            $jinput = JFactory::getApplication()->input;
+            $id     = $jinput->get('id', 1, 'INT');
 
+            switch ($id) {
+                case 2:
+                    $this->message = 'Example User: Goodbye';
+                    break;
+                default:
+                case 1:
+                    $this->message = 'Example User: Welcome';
+                    break;
+            }
+        }
         return $this->message;
     }
 }
