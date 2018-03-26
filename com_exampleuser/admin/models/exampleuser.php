@@ -63,6 +63,16 @@ class ExampleUserModelExampleUser extends JModelAdmin
 	}
 
 	/**
+	 * Method to get the script that has to be included on the form
+	 *
+	 * @return string Script files
+	 */
+	public function getScript()
+	{
+		return 'administrator/components/com_exampleuser//modesl/forms/exampleuser.js';
+	}
+
+	/**
 	 * Method to get the data that should be injected in the form.
 	 *
 	 * @return  mixed  The data for the form.

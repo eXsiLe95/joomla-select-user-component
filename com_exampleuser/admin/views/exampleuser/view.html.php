@@ -35,6 +35,7 @@ class ExampleUserViewExampleUser extends JViewLegacy
 		// Get the Data
 		$this->form = $this->get('Form');
 		$this->item = $this->get('Item');
+		$this->script = $this->get('Script');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
@@ -98,5 +99,8 @@ class ExampleUserViewExampleUser extends JViewLegacy
 		$isNew    = ($this->item->id < 1);
 		$document = JFactory::getDocument();
 		$document->setTitle($isNew ? JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_CREATING') : JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_EDITING'));
+		$document->addScript(JURI::root() . $this->script);
+		$document->addScript(JURI::root() . "/administrator/components/com_exampleuser/views/exampleuser/submitbutton.js");
+		JText::script('COM_EXAMPLEUSER_EXAMPLEUSER_ERROR_UNACCEPTABLE');
 	}
 }
