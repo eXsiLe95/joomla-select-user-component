@@ -10,7 +10,7 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         A basic component on which a user can be selected in the backend which will then be displayed on the frontend
@@ -29,6 +29,8 @@
     <files folder="site">
         <filename>index.html</filename>
         <filename>exampleuser.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
     </files>
 
     <administration>
