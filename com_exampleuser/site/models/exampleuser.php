@@ -14,32 +14,37 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since 0.0.4
  */
-class ExampleUserModelExampleUser extends JModelItem {
-    /**
-     * @var string message
-     */
-    protected $message;
+class ExampleUserModelExampleUser extends JModelItem
+{
+	/**
+	 * @var string message
+	 */
+	protected $message;
 
-    /**
-     * Get the message
-     *
-     * @return   string   The message to be displayed to the user
-     */
-    public function getMessage() {
-        if(!isset($this->message)) {
-            $jinput = JFactory::getApplication()->input;
-            $id     = $jinput->get('id', 1, 'INT');
+	/**
+	 * Get the message
+	 *
+	 * @return   string   The message to be displayed to the user
+	 */
+	public function getMessage()
+	{
+		if (!isset($this->message))
+		{
+			$jinput = JFactory::getApplication()->input;
+			$id     = $jinput->get('id', 1, 'INT');
 
-            switch ($id) {
-                case 2:
-                    $this->message = 'Example User: Goodbye';
-                    break;
-                default:
-                case 1:
-                    $this->message = 'Example User: Welcome';
-                    break;
-            }
-        }
-        return $this->message;
-    }
+			switch ($id)
+			{
+				case 2:
+					$this->message = 'Example User: Goodbye';
+					break;
+				default:
+				case 1:
+					$this->message = 'Example User: Welcome';
+					break;
+			}
+		}
+
+		return $this->message;
+	}
 }

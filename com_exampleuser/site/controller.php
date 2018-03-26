@@ -14,6 +14,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since 0.0.1
  */
-class ExampleUserController extends JControllerLegacy {
+class ExampleUserController extends JControllerLegacy
+{
 
 }
