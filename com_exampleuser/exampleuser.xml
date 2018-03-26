@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
 
-    <name>Example User</name>
+    <name>COM_EXAMPLEUSER</name>
     <!-- The following elements are optional and free of formatting constraints -->
     <creationDate>March 26th, 2018</creationDate>
     <author>Lukas Kimpel</author>
@@ -10,10 +10,10 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.6</version>
+    <version>0.0.8</version>
     <!-- The description is optional and defaults to the name -->
     <description>
-        A basic component on which a user can be selected in the backend which will then be displayed on the frontend
+        COM_EXAMPLEUSER_DESCRIPTION
     </description>
 
     <install> <!-- Runs on install -->
@@ -46,9 +46,14 @@
         <folder>models</folder>
     </files>
 
+    <languages folder="site/language">
+        <language tag="en-GB">en-GB/en-GB.com_exampleuser.ini</language>
+        <language tag="de-DE">de-DE/de-DE.com_exampleuser.ini</language>
+    </languages>
+
     <administration>
         <!-- Administration Menu Section -->
-        <menu link='index.php?option=com_exampleuser'>Example User</menu>
+        <menu link='index.php?option=com_exampleuser'>COM_EXAMPLEUSER_MENU</menu>
         <!-- Administration Main File Copy Section -->
         <!-- Note the folder attribute: This attribute describes the folder
             to copy FROM in the package to install therefore files copied
@@ -67,6 +72,12 @@
             <!-- views files section -->
             <folder>views</folder>
         </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_exampleuser.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_exampleuser.sys.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_exampleuser.ini</language>
+            <language tag="de-DE">de-DE/de-DE.com_exampleuser.sys.ini</language>
+        </languages>
     </administration>
 
 </extension>
