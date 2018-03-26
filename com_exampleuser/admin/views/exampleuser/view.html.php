@@ -26,7 +26,7 @@ class ExampleUserViewExampleUser extends JViewLegacy
 	/**
 	 * Display the ExampleUser view
 	 *
-	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
+	 * @param   string $tpl The name of the template file to parse; automatically searches through the template paths.
 	 *
 	 * @return  void
 	 */
@@ -50,6 +50,9 @@ class ExampleUserViewExampleUser extends JViewLegacy
 
 		// Display the template
 		parent::display($tpl);
+
+		// Set the document
+		$this->setDocument();
 	}
 
 	/**
@@ -83,5 +86,17 @@ class ExampleUserViewExampleUser extends JViewLegacy
 			'exampleuser.cancel',
 			$isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE'
 		);
+	}
+
+	/**
+	 * Method to set up the document properties
+	 *
+	 * @return void
+	 */
+	protected function setDocument()
+	{
+		$isNew    = ($this->item->id < 1);
+		$document = JFactory::getDocument();
+		$document->setTitle($isNew ? JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_CREATING') : JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_EDITING'));
 	}
 }

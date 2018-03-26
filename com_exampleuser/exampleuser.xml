@@ -10,7 +10,7 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.9</version>
+    <version>0.0.10</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         COM_EXAMPLEUSER_DESCRIPTION
@@ -50,6 +50,11 @@
         <language tag="en-GB">en-GB/en-GB.com_exampleuser.ini</language>
         <language tag="de-DE">de-DE/de-DE.com_exampleuser.ini</language>
     </languages>
+
+    <media destination="com_exampleuser" folder="media">
+        <filename>index.html</filename>
+        <folder>images</folder>
+    </media>
 
     <administration>
         <!-- Administration Menu Section -->
