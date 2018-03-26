@@ -10,11 +10,23 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <!-- The description is optional and defaults to the name -->
     <description>
         A basic component on which a user can be selected in the backend which will then be displayed on the frontend
     </description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall><!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
 
     <update> <!-- Runs on update; New since J2.5 -->
         <schemas>
@@ -47,6 +59,10 @@
             <filename>exampleuser.php</filename>
             <!-- SQL files section -->
             <folder>sql</folder>
+            <!-- tables files section -->
+            <folder>tables</folder>
+            <!-- models files section -->
+            <folder>models</folder>
         </files>
     </administration>
 

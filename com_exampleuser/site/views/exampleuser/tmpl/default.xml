@@ -4,16 +4,14 @@
         <message>COM_EXAMPLEUSER_EXAMPLEUSER_VIEW_DEFAULT_DESC</message>
     </layout>
     <fields name="request">
-        <fieldset name="request">
+        <fieldset
+                name="request"
+                addfieldpath="/administrator/components/com_exampleuser/models/fields">
             <field
-                name="id"
-                type="list"
-                label="COM_EXAMPLEUSER_EXAMPLEUSER_FIELD_GREETING_LABEL"
-                description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"
-                default="1">
-                <option value="1">Example User: Welcome</option>
-                <option value="2">Example User: Goodbye</option>
-            </field>
+                    name="id"
+                    type="exampleuser"
+                    label="COM_EXAMPLEUSER_EXAMPLEUSER_FIELD_GREETING_LABEL"
+                    description="COM_HELLOWORLD_HELLOWORLD_FIELD_GREETING_DESC"/>
         </fieldset>
     </fields>
 </metadata>
