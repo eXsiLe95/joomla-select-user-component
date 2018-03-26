@@ -37,7 +37,25 @@ class ExampleUserViewExampleUsers extends JViewLegacy
 			return false;
 		}
 
+		// Set the toolbar
+		$this->addToolBar();
+
 		// Display the template
 		parent::display($tpl);
+	}
+
+	/**
+	 * Add the page title and toolbar
+	 *
+	 * @return void
+	 *
+	 * @since 0.0.9
+	 */
+	protected function addToolBar()
+	{
+		JToolbarHelper::title(JText::_('COM_EXAMPLEUSER_MANAGER_EXAMPLEUSERS'));
+		JToolbarHelper::addNew(JText::_('exampleuser.add'));
+		JToolbarHelper::editList(JText::_('exampleuser.edit'));
+		JToolbarHelper::deleteList(JText::_('exampleuser.delete'));
 	}
 }
