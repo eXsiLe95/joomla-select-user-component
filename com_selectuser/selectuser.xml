@@ -10,7 +10,7 @@
     <copyright>Copyright (c) 2018 Lukas Kimpel</copyright>
     <license>MIT License</license>
     <!--  The version string is recorded in the components table -->
-    <version>0.0.6</version>
+    <version>0.2.1</version>
     <!-- The description is optional and defaults to the name -->
     <description>Select a user as administrator. The selected user's name will be shown in frontend</description>
 
@@ -35,7 +35,6 @@
         to copy FROM in the package to install therefore files copied
         in this section are copied from /site/ in the package -->
     <files folder="site">
-        <filename>index.html</filename>
         <filename>selectuser.php</filename>
         <filename>controller.php</filename>
         <folder>models</folder>
@@ -48,15 +47,17 @@
         <!-- Administration Main File Copy Section -->
         <!-- Note the folder attribute: This attribute describes the folder
             to copy FROM in the package to install therefore files copied
-            in this section are copied from /admin/ in the package -->
-        <files folder="admin">
+            in this section are copied from /administrator/ in the package -->
+        <files folder="administrator">
             <!-- Admin Main File Copy Section -->
-            <filename>index.html</filename>
             <filename>selectuser.php</filename>
             <filename>controller.php</filename>
+            <filename>dispatcher.php</filename>
             <folder>sql</folder>
-            <folder>models</folder>
-            <folder>views</folder>
+            <folder>Controller</folder>
+            <folder>Model</folder>
+            <folder>tmpl</folder>
+            <folder>View</folder>
         </files>
     </administration>
 

@@ -6,15 +6,19 @@
  * Time: 11:00
  */
 
+namespace Joomla\Component\selectuser\Administrator\View\Selectuser;
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+
+use Joomla\CMS\MVC\View\HTMLView as BaseHtmlView;
 
 /**
  * HTML View class for the SelectUser Component
  *
  * @since  0.0.1
  */
-class SelectUserViewSelectUser extends JViewLegacy
+class HtmlView extends BaseHtmlView
 {
 	/**
 	 * Display the Select User view
