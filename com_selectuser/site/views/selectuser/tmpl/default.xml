@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <!-- ToDo: Use language files-->
+    <layout title="Select User">
+        <!-- ToDo: Use language files-->
+        <message>Chose a user that is displayed at frontend</message>
+    </layout>
+    <fields
+            name="request"
+            addfieldpath="/administrator/components/com_selectuser/models/fields"
+    >
+        <fieldset name="request">
+            <field
+                    name="id"
+                    type="selectuser"
+                    label="COM_SELECTUSER_SELECTUSER_FIELD_GREETING_LABEL"
+                    description="COM_SELECTUSER_SELECTUSER_FIELD_GREETING_DESC"
+            />
+        </fieldset>
+    </fields>
+</metadata>
