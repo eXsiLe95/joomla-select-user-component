@@ -49,7 +49,6 @@ class SelectuserModel extends \JModelItem
 				$options[] = $message;
 			}
 		}
-
 		$this->options = $options;
 
 		return $this->options;

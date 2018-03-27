@@ -16,7 +16,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.4
  */
-class SelectUserModelSelectUser extends \JModelItem
+class SelectuserModel extends \JModelItem
 {
 	/**
 	 * @var string username
@@ -50,7 +50,6 @@ class SelectUserModelSelectUser extends \JModelItem
 				$options[] = $message->username;
 			}
 		}
-
 
 		if (!isset($this->username))
 		{

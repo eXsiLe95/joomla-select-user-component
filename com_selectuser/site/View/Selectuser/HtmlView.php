@@ -23,8 +23,11 @@ class HtmlView extends BaseHtmlView
 	 */
 	function display($tpl = null)
 	{
+		$app = \JFactory::getApplication();
+		$this->params = $app->getParams('com_selectuser');
+
 		// Assign data to the view
-		$this->username = $this->get('Username');
+		$this->username = $this->getModel()->getUsername();
 
 		// Check for errors
 		if(count($errors = $this->get('Errors')))
