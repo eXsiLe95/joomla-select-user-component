@@ -1,14 +1,24 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Xsile
+ * Date: 27-Mar-18
+ * Time: 11:00
+ */
+
+namespace Joomla\Component\selectuser\Administrator\View\Selectuser;
 
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+
+use Joomla\CMS\MVC\View\HTMLView as BaseHtmlView;
 
 /**
  * HTML View class for the SelectUser Component
  *
  * @since  0.0.1
  */
-class SelectUserViewSelectUser extends JViewLegacy
+class HtmlView extends BaseHtmlView
 {
 	/**
 	 * Display the Select User view
@@ -20,12 +30,12 @@ class SelectUserViewSelectUser extends JViewLegacy
 	function display($tpl = null)
 	{
 		// Assign data to the view
-		$this->username = $this->get('Username');
+		$this->users = $this->get('Users');
 
 		// Check for errors
 		if(count($errors = $this->get('Errors')))
 		{
-			JLog::add(implode('br />', $errors), JLog::WARNING, 'jerror');
+			\JLog::add(implode('br />', $errors), \JLog::WARNING, 'jerror');
 
 			return false;
 		}

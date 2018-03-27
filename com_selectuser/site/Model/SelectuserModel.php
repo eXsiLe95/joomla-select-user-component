@@ -6,6 +6,8 @@
  * Time: 21:54
  */
 
+namespace Joomla\Component\selectuser\Site\Model;
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
@@ -14,7 +16,7 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.4
  */
-class SelectUserModelSelectUser extends JModelItem
+class SelectuserModel extends \JModelItem
 {
 	/**
 	 * @var string username
@@ -32,7 +34,7 @@ class SelectUserModelSelectUser extends JModelItem
 		if(!isset($userId)) {
 			return false;
 		}
-		$db    = JFactory::getDBO();
+		$db    = \JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName('username'));
 		$query->from($db->quoteName('#__users'));
@@ -49,7 +51,6 @@ class SelectUserModelSelectUser extends JModelItem
 			}
 		}
 
-
 		if (!isset($this->username))
 		{
 			$this->username = $options[0];
@@ -60,7 +61,7 @@ class SelectUserModelSelectUser extends JModelItem
 
 	private function getUserId()
 	{
-		$db    = JFactory::getDBO();
+		$db    = \JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName('userId'));
 		$query->from($db->quoteName('#__selectuser'));

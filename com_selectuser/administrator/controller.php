@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
  * General Controller of SelectUser component
  *
  * @package     Joomla.Administrator
- * @subpackage  com_selectuser
+ * @subpackage  com_selectuser_alt
  * @since       0.0.7
  */
 class SelectUserController extends JControllerLegacy

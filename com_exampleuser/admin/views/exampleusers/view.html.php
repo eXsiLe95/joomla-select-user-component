@@ -27,7 +27,7 @@ class ExampleUserViewExampleUsers extends JViewLegacy
 	{
 		// Get application
 		$app = JFactory::getApplication();;
-		$context = "exampleuser.list.admin.exampleuser";
+		$context = "exampleuser.list.administrator.exampleuser";
 
 		// Get data from the model
 		$this->items            = $this->get('Items');

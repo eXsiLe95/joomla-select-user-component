@@ -6,6 +6,8 @@
  * Time: 21:46
  */
 
+namespace Joomla\Component\selectuser\Administrator\Controller;
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 /**
@@ -13,6 +15,6 @@ defined('_JEXEC') or die('Restricted access');
  *
  * @since  0.0.1
  */
-class SelectUserController extends \JControllerLegacy
+class SelectuserController extends JControllerLegacy
 {
 }

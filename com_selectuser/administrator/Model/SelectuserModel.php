@@ -6,17 +6,19 @@
  * Time: 09:40
  */
 
+namespace Joomla\Component\selectuser\Administrator\Model;
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
-JFormHelper::loadFieldClass('list');
+\JFormHelper::loadFieldClass('list');
 
 /**
  * SelectUser Form Field class for the SelectUser component
  *
  * @since  0.0.7
  */
-class SelectUserModelSelectUser extends JModelItem
+class SelectuserModel extends \JModelItem
 {
 	/**
 	 * The field type
@@ -32,7 +34,7 @@ class SelectUserModelSelectUser extends JModelItem
 	 */
 	public function getUsers()
 	{
-		$db    = JFactory::getDBO();
+		$db    = \JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName(array('id', 'username')));
 		$query->from($db->quoteName('#__users'));
@@ -47,14 +49,13 @@ class SelectUserModelSelectUser extends JModelItem
 				$options[] = $message;
 			}
 		}
-
 		$this->options = $options;
 
 		return $this->options;
 	}
 
 	public function setUser($userId) {
-		$db    = JFactory::getDBO();
+		$db    = \JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$columns = $db->quoteName('userId');
 		$query->insert($db->quoteName('#__selectuser'));
