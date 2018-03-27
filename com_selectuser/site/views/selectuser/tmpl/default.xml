@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <!-- ToDo: Use language files-->
+    <layout title="Select User">
+        <!-- ToDo: Use language files-->
+        <message>Chose a user that is displayed at frontend</message>
+    </layout>
+</metadata>
