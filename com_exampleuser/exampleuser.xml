@@ -74,7 +74,7 @@
             <folder>tables</folder>
             <!-- models files section -->
             <folder>models</folder>
-            <!-- views files section -->
+            <!-- View files section -->
             <folder>views</folder>
             <!-- controllers files section -->
             <folder>controllers</folder>

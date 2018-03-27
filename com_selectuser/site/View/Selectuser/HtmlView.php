@@ -1,14 +1,18 @@
 <?php
 
+namespace Joomla\Component\selectuser\Site\View\Selectuser;
+
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
+
+use Joomla\CMS\MVC\View\HTMLView as BaseHtmlView;
 
 /**
  * HTML View class for the SelectUser Component
  *
  * @since  0.0.1
  */
-class SelectUserViewSelectUser extends JViewLegacy
+class HtmlView extends BaseHtmlView
 {
 	/**
 	 * Display the Select User view
@@ -25,7 +29,7 @@ class SelectUserViewSelectUser extends JViewLegacy
 		// Check for errors
 		if(count($errors = $this->get('Errors')))
 		{
-			JLog::add(implode('br />', $errors), JLog::WARNING, 'jerror');
+			\JLog::add(implode('br />', $errors), \JLog::WARNING, 'jerror');
 
 			return false;
 		}

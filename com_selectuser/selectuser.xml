@@ -35,10 +35,12 @@
         to copy FROM in the package to install therefore files copied
         in this section are copied from /site/ in the package -->
     <files folder="site">
-        <filename>selectuser.php</filename>
         <filename>controller.php</filename>
-        <folder>models</folder>
-        <folder>views</folder>
+        <filename>dispatcher.php</filename>
+        <folder>Controller</folder>
+        <folder>Model</folder>
+        <folder>tmpl</folder>
+        <folder>View</folder>
     </files>
 
     <administration>
@@ -50,7 +52,6 @@
             in this section are copied from /administrator/ in the package -->
         <files folder="administrator">
             <!-- Admin Main File Copy Section -->
-            <filename>selectuser.php</filename>
             <filename>controller.php</filename>
             <filename>dispatcher.php</filename>
             <folder>sql</folder>

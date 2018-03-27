@@ -100,7 +100,7 @@ class ExampleUserViewExampleUser extends JViewLegacy
 		$document = JFactory::getDocument();
 		$document->setTitle($isNew ? JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_CREATING') : JText::_('COM_EXAMPLEUSER_EXAMPLEUSER_EDITING'));
 		$document->addScript(JURI::root() . $this->script);
-		$document->addScript(JURI::root() . "/administrator/components/com_exampleuser/views/exampleuser/submitbutton.js");
+		$document->addScript(JURI::root() . "/administrator/components/com_exampleuser/View/exampleuser/submitbutton.js");
 		JText::script('COM_EXAMPLEUSER_EXAMPLEUSER_ERROR_UNACCEPTABLE');
 	}
 }
