@@ -28,11 +28,56 @@ class SelectUserModelSelectUser extends JModelItem
 	 */
 	public function getUsername()
 	{
+		$userId = $this->getUserId();
+		if(!isset($userId)) {
+			return false;
+		}
+		$db    = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		$query->select('username');
+		$query->from('#__users');
+		$query->where($db->quoteName('id') . ' = ' . $userId);
+		$db->setQuery((string) $query);
+		$messages = $db->loadObjectList();
+		$options  = array();
+
+		if ($messages)
+		{
+			foreach ($messages as $message)
+			{
+				$options[] = $message->username;
+			}
+		}
+
+
 		if (!isset($this->username))
 		{
-			$this->username = 'John Doe';
+			$this->username = $options[0];
 		}
 
 		return $this->username;
+	}
+
+	private function getUserId()
+	{
+		$db    = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		$query->select('userId');
+		$query->from('#__selectuser');
+		$query->order($db->quoteName('id') . ' DESC');
+		$query->setLimit('1');
+		$db->setQuery((string) $query);
+		$messages = $db->loadObjectList();
+		$options  = array();
+
+		if ($messages)
+		{
+			foreach ($messages as $message)
+			{
+				$options[] = $message->userId;
+			}
+		}
+
+		return $options[0];
 	}
 }
