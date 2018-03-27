@@ -21,13 +21,10 @@ class DisplayController extends BaseController
 	public function display($cachable = false, $urlparams = array())
 	{
 		$app = \JFactory::getApplication();
-		$userId = $app->input->getInt("selecteduser");
+		$userId = $app->input->getInt("selectedUser");
 
-		var_dump($userId);
-
-		//$userId = \JFactory::getApplication()->input->get('selecteduser');
 		if(isset($userId)){
-			$model = getModel('selectuser');
+			$model = parent::getModel('selectuser');
 			$model->setUser($userId);
 		}
 
