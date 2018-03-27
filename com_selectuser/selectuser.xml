@@ -38,8 +38,8 @@
         <filename>index.html</filename>
         <filename>selectuser.php</filename>
         <filename>controller.php</filename>
-        <folder>views</folder>
         <folder>models</folder>
+        <folder>views</folder>
     </files>
 
     <administration>
@@ -53,12 +53,10 @@
             <!-- Admin Main File Copy Section -->
             <filename>index.html</filename>
             <filename>selectuser.php</filename>
-            <!-- SQL files section -->
+            <filename>controller.php</filename>
             <folder>sql</folder>
-            <!-- tables files section -->
-            <folder>tables</folder>
-            <!-- models files section -->
             <folder>models</folder>
+            <folder>views</folder>
         </files>
     </administration>
 
